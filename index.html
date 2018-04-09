@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <!-- Meta tag viewport para tornar a página responsiva -->
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+    <!-- Link para a família de fontes e ícones do Google -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="_materialdesign/material.min.css">
+    <link rel="stylesheet" href="_dist/_css/style.min.css">
+    
+    <!-- Scrips do material design -->
+    <script src="_materialdesign/material.min.js"></script>
+
+    <title>Repositório Digital</title>
+
+    <body>
+        <div id="topo" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+            <header id="cabecalho" class="mdl-layout__header mdl-layout__header--scroll">
+                <!-- div com o conteúdo do cabeçalho -->
+                <div id="cabecalho" class="mdl-layout__header-row">
+                    <span class="mdl-layout-title">
+                        Repositório Digital
+                    </span>
+                    
+                    <div class="mdl-layout-spacer"></div>
+                   
+                    <nav id="menu" class="mdl-navigation">
+                        <a href="" class="mdl-navigation__link">Artigos</a>
+                        <a href="login.html" class="mdl-navigation__link">Login</a>
+                        <a href="" class="mdl-navigation__link">Registrar</a>
+                    </nav>
+                    
+                    <!-- campo de texto para pesquisar -->
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
+                        <label class="mdl-button mdl-js-button mdl-button--icon" for="fixed-header-drawer-exp">
+                            <i class="material-icons">search</i>
+                        </label>
+
+                        <div class="mdl-textfield__expandable-holder">
+                            <input class="mdl-textfield__input" type="text" name="sample" id="fixed-header-drawer-exp">
+                        </div>
+                    </div>
+                </div>
+            </header>
+            
+            <!-- div com o conteúdo do menu lateral -->
+            <div id="menulateral" class="mdl-layout__drawer">
+                    <span class="mdl-layout-title">
+                        Repositório Digital
+                    </span>
+                    
+                    <nav id="menu" class="mdl-navigation">
+                        <a href="" class="mdl-navigation__link">Artigos</a>
+                        <a href="login.html" class="mdl-navigation__link">Login</a>
+                        <a href="" class="mdl-navigation__link">Registrar</a>
+                    </nav>
+            </div>
+        </div>
+
+        <!-- O conteúdo dentro da tag main deve ser único e não pode estar repetindo em outras páginas -->
+        <main class="mdl-layout__content">
+            <div id="conteudo" class="page-content">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et voluptates eligendi facilis, iure ipsum aut ea, facere, sint quod explicabo suscipit, quis enim vero consequatur maiores eveniet corrupti. Iusto, dolorem!
+            </div>
+            <div class="page-content">
+                
+            </div>
+        </main>
+
+        <footer class="mdl-mini-footer">
+            <div id="rodape">
+                <ul class="">
+                    <li>Sobre Nós</li>
+                    <li>Facebook</li>
+                    <li>Mapa do Site</li>
+                </ul>
+            </div>
+        </footer>
+    </body>
+
+</html>
