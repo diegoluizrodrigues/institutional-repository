@@ -12,9 +12,22 @@
     <link rel="stylesheet" href="_materialdesign/material.min.css">
     <link rel="stylesheet" href="_dist/_css/style.min.css">
     
-    <!-- Scrips do material design -->
+    <!-- Scripts do material design -->
     <script src="_materialdesign/material.min.js"></script>
-
+    
+    <!-- Scripts do JQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+		$(document).ready(function(){
+			$("[href]#isenable").click(function(){
+				$(".mostrar-ocultar").show();
+			});
+			$("[href]#isenable").dblclick(function(){
+				$(".mostrar-ocultar").hide();
+			});
+		});
+	</script>
+    
     <title>Repositório Institucional</title>
 </head>
     
@@ -30,10 +43,19 @@
                     
                     <div class="mdl-layout-spacer"></div>
                    
-                    <nav id="menu" class="mdl-navigation">
-                        <a href="" class="mdl-navigation__link">Artigos</a>
-                        <a href="login.html" class="mdl-navigation__link">Entrar</a>
-                        <a href="" class="mdl-navigation__link">Registrar</a>
+                    <nav id="menu" class="mdl-navigation hide-menu">
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">library_books</i>
+                        </span>
+                            <a href="" class="mdl-navigation__link">Artigos</a>
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">person</i>
+                        </span>
+                            <a href="login.html" class="mdl-navigation__link">Entrar</a>
+                        <span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">how_to_reg</i>
+                        </span>
+                            <a href="" class="mdl-navigation__link">Registrar</a>
                     </nav>
                     
                     <!-- campo de texto para pesquisar -->
@@ -56,9 +78,59 @@
                     </span>
                     
                     <nav id="menu" class="mdl-navigation">
-                        <a href="" class="mdl-navigation__link">Artigos</a>
-                        <a href="login.html" class="mdl-navigation__link">Entrar</a>
-                        <a href="" class="mdl-navigation__link">Registrar</a>
+                        <a href="" class="mdl-navigation__link">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">library_books</i>
+                            </span>
+                            Artigos
+                        </a>
+                        <a href="#" id="isenable" class="mdl-navigation__link">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">person</i>
+                            </span>
+                            Entrar
+                        </a>
+                            <ul class="demo-list-item mdl-list mostrar-ocultar" style="display: none">
+                                <li id="ishidden" class="mdl-list__item ">
+                                    <a href="login.html" class="mdl-navigation__link">
+                                    <span class="mdl-list__item-primary-content">
+                                        <i class="material-icons mdl-list__item-icon">
+                                            assignment_ind
+                                        </i>
+                                        Aluno
+                                    </span>
+                                    </a>
+                                </li>
+                                
+                                <li id="ishidden" class="mdl-list__item">
+                                    <a href="#" class="mdl-navigation__link">
+                                    <span class="mdl-list__item-primary-content">
+                                        <i class="material-icons mdl-list__item-icon">
+                                            school
+                                        </i>
+                                        Professor
+                                    </span>
+                                    </a>
+                                </li>
+                                
+                                <li id="ishidden" class="mdl-list__item">
+                                    <a href="#" class="mdl-navigation__link">
+                                    <span class="mdl-list__item-primary-content">
+                                        <i class="material-icons mdl-list__item-icon">
+                                            local_library
+                                        </i>
+                                        Bibliotecário
+                                    </span>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        <a href="" class="mdl-navigation__link">
+                            <span class="mdl-list__item-primary-content">
+                                <i class="material-icons mdl-list__item-icon">how_to_reg</i>
+                            </span>
+                            Registrar
+                        </a>
                     </nav>
             </div>
         </div>
@@ -69,9 +141,6 @@
                 Apresentação
                 <br>
                 O Repositório Digital permite que seus alunos possam: armazenar, preservar, disseminar e acessar às produções científicas e acadêmica da faculdade.
-            </div>
-            <div class="page-content">
-                
             </div>
         </main>
         <!--Rodapé do site-->
