@@ -9,6 +9,8 @@
 
     <!-- Link para a família de fontes e ícones do Google -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!--    Link da CDN do Google-->
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_purple.min.css">
     <link rel="stylesheet" href="_materialdesign/material.min.css">
     <link rel="stylesheet" href="_dist/_css/style.min.css">
     
@@ -17,6 +19,8 @@
     
     <!-- Scripts do JQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    
+	<!--    Script do Registrar do Menu Lateral-->
     <script>
 		$(document).ready(function(){
 			$("[href]#isenable").click(function(){
@@ -28,11 +32,11 @@
 		});
 	</script>
     
-    <title>Repositório Institucional</title>
+    <title>Administrador - Repositório Digital</title>
 </head>
-    
-    <body>
-        <div id="topo" class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+
+<body>
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
             <header id="cabecalho" class="mdl-layout__header mdl-layout__header--scroll">
                
                 <!-- div com o conteúdo do cabeçalho -->
@@ -45,14 +49,15 @@
                    
                     <nav id="menu" class="mdl-navigation hide-menu">
                         <span class="mdl-list__item-primary-content">
-                            <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">person</i>
-                        </span>
-                            <a href="login.html" class="mdl-navigation__link">Entrar</a>
-                        <span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">how_to_reg</i>
                         </span>
                             <a href="" class="mdl-navigation__link">Registrar</a>
                     </nav>
+                    	
+                    	<span class="mdl-list__item-primary-content">
+                            <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">exit_to_app</i>
+                        </span>
+                            <a href="" class="mdl-navigation__link">Sair</a>
                     
                     <!-- campo de texto para pesquisar -->
                     <div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable mdl-textfield--floating-label mdl-textfield--align-right">
@@ -76,13 +81,13 @@
                     <nav id="menu" class="mdl-navigation">
                         <a href="#" id="isenable" class="mdl-navigation__link">
                             <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon">person</i>
+                                <i class="material-icons mdl-list__item-icon">how_to_reg</i>
                             </span>
-                            Entrar
+                            Registrar
                         </a>
                             <ul class="demo-list-item mdl-list mostrar-ocultar" style="display: none">
                                 <li id="ishidden" class="mdl-list__item ">
-                                    <a href="login.html" class="mdl-navigation__link">
+                                    <a href="" class="mdl-navigation__link">
 										<span class="mdl-list__item-primary-content">
 											<i class="material-icons mdl-list__item-icon">
 												assignment_ind
@@ -93,18 +98,7 @@
                                 </li>
                                 
                                 <li id="ishidden" class="mdl-list__item">
-                                    <a href="log-prof-bib.html" class="mdl-navigation__link">
-										<span class="mdl-list__item-primary-content">
-											<i class="material-icons mdl-list__item-icon">
-												school
-											</i>
-											Professor
-										</span>
-                                    </a>
-                                </li>
-                                
-                                <li id="ishidden" class="mdl-list__item">
-                                    <a href="log-prof-bib.html" class="mdl-navigation__link">
+                                    <a href="" class="mdl-navigation__link">
 										<span class="mdl-list__item-primary-content">
 											<i class="material-icons mdl-list__item-icon">
 												local_library
@@ -113,27 +107,69 @@
 										</span>
                                     </a>
                                 </li>
+                                
+                                <li id="ishidden" class="mdl-list__item">
+                                    <a href="" class="mdl-navigation__link">
+										<span class="mdl-list__item-primary-content">
+											<i class="material-icons mdl-list__item-icon">
+												party_mode
+											</i>
+											Curso
+										</span>
+                                    </a>
+                                </li>
+                                
+                                <li id="ishidden" class="mdl-list__item">
+                                    <a href="" class="mdl-navigation__link">
+										<span class="mdl-list__item-primary-content">
+											<i class="material-icons mdl-list__item-icon">
+												pages
+											</i>
+											Disciplina
+										</span>
+                                    </a>
+                                </li>
+                                
+                                <li id="ishidden" class="mdl-list__item">
+                                    <a href="" class="mdl-navigation__link">
+										<span class="mdl-list__item-primary-content">
+											<i class="material-icons mdl-list__item-icon">
+												book
+											</i>
+											Livro
+										</span>
+                                    </a>
+                                </li>
+                                
+                                <li id="ishidden" class="mdl-list__item">
+                                    <a href="" class="mdl-navigation__link">
+										<span class="mdl-list__item-primary-content">
+											<i class="material-icons mdl-list__item-icon">
+												school
+											</i>
+											Professor
+										</span>
+                                    </a>
+                                </li>
                             </ul>
-                            
-                        <a href="" class="mdl-navigation__link">
-                            <span class="mdl-list__item-primary-content">
-                                <i class="material-icons mdl-list__item-icon">how_to_reg</i>
-                            </span>
-                            Registrar
-                        </a>
+                    	
+                    	<a href="" class="mdl-navigation__link">
+                    		<span class="mdl-list__item-primary-content">
+                            	<i class="material-icons mdl-list__item-icon">exit_to_app</i>
+                        	</span>
+                            Sair
+                    	</a>                           
                     </nav>
             </div>
-        </div>
-
-        <!-- O conteúdo dentro da tag main deve ser único e não pode estar repetindo em outras páginas -->
-        <main class="mdl-layout__content">
-            <div id="conteudo" class="page-content">
-                Apresentação
-                <br>
-                O Repositório Digital permite que seus alunos possam: armazenar, preservar, disseminar e acessar às produções científicas e acadêmica da faculdade.
-            </div>
-        </main>
-        <!--Rodapé do site-->
+	</div>
+	
+	<main id="conteudo">
+		<div style="width: 700px; height: 450px;">
+			
+		</div>
+	</main>
+	
+	<!--Rodapé do site-->
         <footer class="mdl-mini-footer">
             <div id="rodape">
                 <ul class="demo-list-item mdl-list">
@@ -149,5 +185,5 @@
                 </ul>
             </div>
         </footer>
-    </body>
+</body>
 </html>
