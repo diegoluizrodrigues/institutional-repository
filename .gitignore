@@ -5,8 +5,7 @@
 
 # dependencies
 /node_modules
-/src
-gulpfile.js
+/_src
 
 # IDEs and editors
 
