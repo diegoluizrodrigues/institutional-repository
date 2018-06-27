@@ -2,111 +2,103 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
+	<meta charset="UTF-8">
 
-    <!-- Meta tag viewport para tornar a página responsiva -->
-    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+	<!-- Meta tag viewport para tornar a página responsiva -->
+	<meta name="viewport" content="width-device-width, initial-scale=1.0">
 
-    <!-- Link para a família de fontes e ícones do Google -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<!-- Link para a família de fontes e ícones do Google -->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
 	<!-- Link da CDN do Google -->
-    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_purple.min.css">
-    
-    <!-- Arquivos Locais do Material -->
-	<!--    <link rel="stylesheet" href="_materialdesign/material.min.css">-->
-	
-   	<!--    Outras estilizações-->
-    <link rel="stylesheet" href="../../_dist/_css/style.min.css">
-    
-    <!-- Scripts do material design -->
-    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
-	<!--    <script src="_materialdesign/material.min.js"></script>-->
-    
-    <!-- Scripts do JQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    
-    <title>Administrador - Repositório Digital</title>
+	<link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-deep_purple.min.css">
+	<script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+	<!--    Outras estilizações-->
+	<link rel="stylesheet" href="../../_dist/_css/style.min.css">
+
+	<title>Administrador - Repositório Digital</title>
 </head>
 
 <body>
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header mdl-layout--fixed-drawer">
-            <header class="mdl-layout__header mdl-layout__header--scroll">
+		<header class="mdl-layout__header mdl-layout__header--scroll">
 
-                <!-- div com o conteúdo do cabeçalho -->
-                <div class="mdl-layout__header-row">
-                    <span class="mdl-layout-title">
+			<!-- div com o conteúdo do cabeçalho -->
+			<div class="mdl-layout__header-row">
+				<span class="mdl-layout-title">
                         Administrador - Registrar
                     </span>
 
-                    <div class="mdl-layout-spacer"></div>
-                    
-                    <nav id="menu" class="mdl-navigation hide-menu">
-                        <span class="mdl-list__item-primary-content">
+				<div class="mdl-layout-spacer"></div>
+
+				<nav id="menu" class="mdl-navigation hide-menu">
+					<span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">home</i>
                         </span>
-                            <a href="adm.html" class="mdl-navigation__link">Início</a>
-                    </nav>
+					<a href="adm.html" class="mdl-navigation__link">Início</a>
+				</nav>
 
-                    <nav id="menu" class="mdl-navigation hide-menu">
-                        <span class="mdl-list__item-primary-content">
+				<nav id="menu" class="mdl-navigation hide-menu">
+					<span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">search</i>
                         </span>
-                            <a href="visualizar.html" class="mdl-navigation__link">Visualizar</a>
-                    </nav>
+					<a href="visualizar.html" class="mdl-navigation__link">Visualizar</a>
+				</nav>
 
-                    <nav id="menu" class="mdl-navigation hide-menu">
-                        <span class="mdl-list__item-primary-content">
+				<nav id="menu" class="mdl-navigation hide-menu">
+					<span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--red">how_to_reg</i>
                         </span>
-                            <a href="registrar.html" class="mdl-navigation__link">Registrar</a>
-                    </nav>
-                    
-                    <nav id="menu" class="mdl-navigation hide-menu">
-                    	<span class="mdl-list__item-primary-content">
+					<a href="registrar.html" class="mdl-navigation__link">Registrar</a>
+				</nav>
+
+				<nav id="menu" class="mdl-navigation hide-menu">
+					<span class="mdl-list__item-primary-content">
                             <i class="material-icons mdl-list__item-icon mdl-color--primary mdl-color-text--white">exit_to_app</i>
                         </span>
-                            <a href="" class="mdl-navigation__link">Sair</a>
-                    </nav>
-                </div>
-            </header>
-            
-            <!-- div com o conteúdo do menu lateral -->
-            <div id="menulateral" class="mdl-layout__drawer">
-				<img src="../../_img/repdiglogo.png" alt="Logotipo">
-    
-				<nav id="menu" class="mdl-navigation">
-				
-					<a href="adm.html" id="isenable" class="mdl-navigation__link">
+					<a href="" class="mdl-navigation__link">Sair</a>
+				</nav>
+			</div>
+		</header>
+
+		<!-- div com o conteúdo do menu lateral -->
+		<div id="menulateral" class="mdl-layout__drawer">
+			<img src="../../_img/repdiglogo.png" alt="Logotipo">
+
+			<nav id="menu" class="mdl-navigation">
+
+				<a href="adm.html" id="isenable" class="mdl-navigation__link">
 						<span class="mdl-list__item-primary-content">
 							<i class="material-icons mdl-list__item-icon">home</i>
 						</span>
 						Início
 					</a>
-					
-					<a href="visualizar.html" id="isenable" class="mdl-navigation__link">
+
+				<a href="visualizar.html" id="isenable" class="mdl-navigation__link">
 						<span class="mdl-list__item-primary-content">
 							<i class="material-icons mdl-list__item-icon">search</i>
 						</span>
 						Visualizar
 					</a>
 
-					<a href="registrar.html" class="mdl-navigation__link"  style="font-weight: bold;">
+				<a href="registrar.html" class="mdl-navigation__link" style="font-weight: bold;">
 						<span class="mdl-list__item-primary-content">
 							<i class="material-icons mdl-list__item-icon mdl-color-text--red">how_to_reg</i>
 						</span>
 						Registrar
 					</a>
 
-					<a href="" class="mdl-navigation__link">
+				<a href="" class="mdl-navigation__link">
 						<span class="mdl-list__item-primary-content">
 							<i class="material-icons mdl-list__item-icon">exit_to_app</i>
 						</span>
 						Sair
-					</a>                           
-				</nav>
-            </div>
+					</a>
+			</nav>
+		</div>
 	</div>
-	
+
 	<main id="conteudo">
 		<div class="mdl-tabs mdl-js-tabs mdl-js-ripple-effect">
 			<div class="mdl-tabs__tab-bar">
@@ -117,12 +109,12 @@
 				<a href="#livro" class="mdl-tabs__tab">Livro</a>
 				<a href="#professor" class="mdl-tabs__tab">Professor</a>
 			</div>
-			
+
 			<div class="mdl-tabs__panel is-active" id="aluno">
 				<!--Formulario do Aluno-->
 				<h5>Registrar Aluno</h5>
 				<form action="#">
-					
+
 					<div class="mdl-textfield mdl-js-textfield">
 						<input type="text" id="ra" class="mdl-textfield__input" pattern="-?[0-9]*(\.[0-9]+)?">
 						<label for="ra" class="mdl-textfield__label">
@@ -160,12 +152,12 @@
 					</button>
 				</form>
 			</div>
-			
+
 			<div class="mdl-tabs__panel" id="bibliotecario">
 				<!--Formulario do Bibliotecario-->
 				<h5>Registrar Bibliotecário</h5>
 				<form action="#">
-					
+
 					<div class="mdl-textfield mdl-js-textfield">
 						<input type="text" id="nome" class="mdl-textfield__input">
 						<label for="nome" class="mdl-textfield__label">
@@ -207,12 +199,12 @@
 					</button>
 				</form>
 			</div>
-			
+
 			<div class="mdl-tabs__panel" id="curso">
 				<!--Formulario do Curso-->
 				<h5>Registrar Curso</h5>
 				<form action="#">
-					
+
 					<div class="mdl-textfield mdl-js-textfield">
 						<input type="text" id="nome" class="mdl-textfield__input">
 						<label for="nome" class="mdl-textfield__label">
@@ -231,12 +223,12 @@
 					</button>
 				</form>
 			</div>
-			
+
 			<div class="mdl-tabs__panel" id="disciplina">
 				<!--Formulario da Disciplina-->
 				<h5>Registrar Disciplina</h5>
 				<form action="#">
-					
+
 					<div class="mdl-textfield mdl-js-textfield">
 						<input type="text" id="nome" class="mdl-textfield__input">
 						<label for="nome" class="mdl-textfield__label">
@@ -255,12 +247,12 @@
 					</button>
 				</form>
 			</div>
-			
+
 			<div class="mdl-tabs__panel" id="livro">
 				<!--Formulario do Livro-->
 				<h5>Registrar Livro</h5>
 				<form action="#">
-					
+
 					<div class="mdl-textfield mdl-js-textfield">
 						<input type="text" id="nome" class="mdl-textfield__input">
 						<label for="nome" class="mdl-textfield__label">
@@ -343,12 +335,12 @@
 					</button>
 				</form>
 			</div>
-			
+
 			<div class="mdl-tabs__panel" id="professor">
 				<!--Formulario do Professor-->
 				<h5>Registrar Professor</h5>
 				<form action="#">
-					
+
 					<div class="mdl-textfield mdl-js-textfield">
 						<input type="text" id="nome" class="mdl-textfield__input">
 						<label for="nome" class="mdl-textfield__label">
@@ -378,7 +370,7 @@
 			</div>
 		</div>
 	</main>
-	
+
 	<!--Rodapé do site-->
 	<footer class="mdl-mini-footer">
 		<div class="mdl-mini-footer__right-section">
@@ -393,4 +385,5 @@
 		</div>
 	</footer>
 </body>
+
 </html>
