@@ -122,28 +122,17 @@
 				<!--Formulario do Aluno-->
 				<h5>Visualizar Aluno</h5>
 				<form action="#">
-					
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="ra" class="mdl-textfield__input" pattern="-?[0-9]*(\.[0-9]+)?">
-						<label for="ra" class="mdl-textfield__label">
-							RA do Aluno
-						</label>
-						<span class="mdl-textfield__error">
-							Digite somente os números neste campo.
-						</span>
-					</div>
+					<select name="" id="">
+						<option value="">RA do Aluno</option>
+						<option value="">Nome do Aluno</option>
+						<option value="">Email</option>
+					</select>
+					<br>
 					<br>
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="nome" class="mdl-textfield__label">
-							Nome do Aluno
-						</label>
-					</div>
-					<br>
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="email" class="mdl-textfield__label">
-							Email
+						<input type="text" id="" class="mdl-textfield__input">
+						<label for="" class="mdl-textfield__label">
+							Digite aqui
 						</label>
 					</div>
 					<br>
@@ -172,35 +161,97 @@
 					  	
 					  	<tbody>
 							<tr>
-						  		<td>123</td>
-						  		<td class="mdl-data-table__cell--non-numeric">Aluno</td>
-						  		<td class="mdl-data-table__cell--non-numeric">aluno@repo.com</td>
-						  		<td>123</td>
+						  		<td></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td></td>
 							</tr>
 						
 					  		<tr>
-						  		<td>123</td>
-						  		<td class="mdl-data-table__cell--non-numeric">Aluno</td>
-						  		<td class="mdl-data-table__cell--non-numeric">aluno@repo.com</td>
-						  		<td>123</td>
+						  		<td></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td></td>
 							</tr>
 							
 							<tr>
-						  		<td>123</td>
-						  		<td class="mdl-data-table__cell--non-numeric">Aluno</td>
-						  		<td class="mdl-data-table__cell--non-numeric">aluno@repo.com</td>
-						  		<td>123</td>
+						  		<td></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td></td>
 							</tr>
 					  	</tbody>
 					</table>
 					<br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+					
+					<!--Início do Modal Editar Aluno-->
+					<button id="editarAluno" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 						Editar
 					</button>
 					
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent mdl-button--colored">
-						Gravar
-					</button>
+					<dialog id="Aluno" class="mdl-dialog">
+						<h5 class="mdl-dialog__title" style="font-size: 20px;">
+							Editar Registro
+						</h5>
+						<div class="mdl-dialog__content">
+							<form action="#">
+
+								<div class="mdl-textfield mdl-js-textfield">
+									<input type="text" id="ra" class="mdl-textfield__input" pattern="-?[0-9]*(\.[0-9]+)?">
+									<label for="ra" class="mdl-textfield__label">
+										RA do Aluno
+									</label>
+									<span class="mdl-textfield__error">
+										Digite somente os números neste campo.
+									</span>
+								</div>
+								<br>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input type="text" id="nome" class="mdl-textfield__input">
+									<label for="nome" class="mdl-textfield__label">
+										Nome do Aluno
+									</label>
+								</div>
+								<br>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input type="text" id="email" class="mdl-textfield__input">
+									<label for="email" class="mdl-textfield__label">
+										Email
+									</label>
+								</div>
+								<br>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input type="text" id="senha" class="mdl-textfield__input">
+									<label for="senha" class="mdl-textfield__label">
+										Senha de Acesso
+									</label>
+								</div>
+								<br>
+								<br>
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+									Gravar
+								</button>
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close">
+									Cancelar
+								</button>
+							</form>
+						</div>
+					</dialog>
+					
+					<script>
+						var dialog = document.querySelector('dialog');
+						var showDialogButton = document.querySelector('#editarAluno');
+						
+						if (! dialog.showModal) {
+						  dialogPolyfill.registerDialog(dialog);
+						}
+						showDialogButton.addEventListener('click', function() {
+						  dialog.showModal();
+						});
+						dialog.querySelector('.close').addEventListener('click', function() {
+						  dialog.close();
+						});
+					 </script>
 					
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" disabled>
 						Excluir
@@ -212,18 +263,25 @@
 				<!--Formulario do Bibliotecario-->
 				<h5>Visualizar Bibliotecário</h5>
 				<form action="#">
-					
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="nome" class="mdl-textfield__label">
-							Nome do Bibliotecario
-						</label>
-					</div>
+					<label for="nomebibli" class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+						<input type="radio" id="nomebibli" class="mdl-radio__button" name="options" value="1" checked>
+						<span class="mdl-radio__label">
+							Nome do Bibliotecário
+						</span>
+					</label>
+					<br>
+					<label for="emailbibli" class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+						<input type="radio" id="emailbibli" class="mdl-radio__button" name="options" value="2">
+						<span class="mdl-radio__label">
+							Email
+						</span>
+					</label>
+					<br>
 					<br>
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="email" class="mdl-textfield__label">
-							Email
+						<input type="text" id="" class="mdl-textfield__input">
+						<label for="" class="mdl-textfield__label">
+							Digite aqui
 						</label>
 					</div>
 					<br>
@@ -252,35 +310,87 @@
 					  	
 					  	<tbody>
 							<tr>
-						  		<td class="mdl-data-table__cell--non-numeric">Bibliotecário</td>
-						  		<td class="mdl-data-table__cell--non-numeric">bibliotecario@repo.com</td>
-						  		<td>123</td>
-						  		<td class="mdl-data-table__cell--non-numeric">Ativo</td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
 							</tr>
 						
 					  		<tr>
-						  		<td class="mdl-data-table__cell--non-numeric">Bibliotecário</td>
-						  		<td class="mdl-data-table__cell--non-numeric">bibliotecario@repo.com</td>
-						  		<td>123</td>
-						  		<td class="mdl-data-table__cell--non-numeric">Ativo</td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
 							</tr>
 							
 							<tr>
-						  		<td class="mdl-data-table__cell--non-numeric">Bibliotecário</td>
-						  		<td class="mdl-data-table__cell--non-numeric">bibliotecario@repo.com</td>
-						  		<td>123</td>
-						  		<td class="mdl-data-table__cell--non-numeric">Ativo</td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
+						  		<td></td>
+						  		<td class="mdl-data-table__cell--non-numeric"></td>
 							</tr>
 					  	</tbody>
 					</table>
 					<br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+					
+					<!--Início do Modal Editar Bibliotecário-->
+					<button id="editarBibliotecario" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 						Editar
 					</button>
 					
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-						Gravar
-					</button>
+					<dialog class="mdl-dialog">
+						<h5 class="mdl-dialog__title" style="font-size: 20px;">
+							Editar Registro
+						</h5>
+						<div class="mdl-dialog__content">
+							<form action="#">
+
+								<div class="mdl-textfield mdl-js-textfield">
+									<input type="text" id="nome" class="mdl-textfield__input">
+									<label for="nome" class="mdl-textfield__label">
+										Nome do Bibliotecário
+									</label>
+								</div>
+								<br>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input type="text" id="email" class="mdl-textfield__input">
+									<label for="email" class="mdl-textfield__label">
+										Email
+									</label>
+								</div>
+								<br>
+								<div class="mdl-textfield mdl-js-textfield">
+									<input type="text" id="senha" class="mdl-textfield__input">
+									<label for="senha" class="mdl-textfield__label">
+										Senha de Acesso
+									</label>
+								</div>
+								<br>
+								<br>
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+									Gravar
+								</button>
+								<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent close">
+									Cancelar
+								</button>
+							</form>
+						</div>
+					</dialog>
+					
+					<script>
+						var dialog = document.querySelector('dialog');
+						var showDialogButton = document.querySelector('#editarBibliotecario');
+						
+						if (! dialog.showModal) {
+						  dialogPolyfill.registerDialog(dialog);
+						}
+						showDialogButton.addEventListener('click', function() {
+						  dialog.showModal();
+						});
+						dialog.querySelector('.close').addEventListener('click', function() {
+						  dialog.close();
+						});
+					 </script>
 					
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" disabled>
 						Excluir
@@ -422,43 +532,20 @@
 				<!--Formulario do Livro-->
 				<h5>Visualizar Livro</h5>
 				<form action="#">
-					
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="nome" class="mdl-textfield__label">
-							Título do Livro
-						</label>
-					</div>
+					<select name="" id="">
+						<option value="">Título do Livro</option>
+						<option value="">Editora</option>
+						<option value="">Ano do Livro</option>
+						<option value="">Autor</option>
+						<option value="">ISBN</option>
+					</select>
+					<br>
 					<br>
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="editora" class="mdl-textfield__label">
-							Editora
+						<input type="text" id="" class="mdl-textfield__input">
+						<label for="" class="mdl-textfield__label">
+							Digite aqui
 						</label>
-					</div>
-					<br>
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="ano" class="mdl-textfield__label">
-							Ano do Livro
-						</label>
-					</div>
-					<br>
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="autor" class="mdl-textfield__label">
-							Autor do Livro
-						</label>
-					</div>
-					<br>
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="isbn" class="mdl-textfield__label">
-							ISBN
-						</label>
-						<span class="mdl-textfield__error">
-							Digite somente os números neste campo.
-						</span>
 					</div>
 					<br>
 					<br>
@@ -542,18 +629,25 @@
 				<!--Formulario do Professor-->
 				<h5>Visualizar Professor</h5>
 				<form action="#">
-					
-					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="nome" class="mdl-textfield__label">
+					<label for="nomeprof" class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+						<input type="radio" id="nomeprof" class="mdl-radio__button" name="options" value="1" checked>
+						<span class="mdl-radio__label">
 							Nome do Professor
-						</label>
-					</div>
+						</span>
+					</label>
+					<br>
+					<label for="email" class="mdl-radio mdl-js-radio mdl-js-ripple-effect">
+						<input type="radio" id="email" class="mdl-radio__button" name="options" value="2">
+						<span class="mdl-radio__label">
+							Email
+						</span>
+					</label>
+					<br>
 					<br>
 					<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-						<input type="text" id="nome" class="mdl-textfield__input">
-						<label for="email" class="mdl-textfield__label">
-							Email
+						<input type="text" id="" class="mdl-textfield__input">
+						<label for="" class="mdl-textfield__label">
+							Digite aqui
 						</label>
 					</div>
 					<br>
