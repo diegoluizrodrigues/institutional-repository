@@ -5,8 +5,12 @@
 
 # dependencies
 /node_modules
+<<<<<<< HEAD
 /_src/
 gulpfile.js
+=======
+/_src
+>>>>>>> 48405e86dac217d956882d955198d356d02158c6
 
 # IDEs and editors
 
